@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-    image(video,0,0,900,400);
+    image(video,0,0,1000,500);
     tint(color_name);
 
     if (frame_name == "Circle"){
