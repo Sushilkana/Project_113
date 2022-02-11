@@ -1,14 +1,12 @@
 function preload(){
-
+    img = loadImage("https://media1.giphy.com/media/UqUHuT6y9mK5HfsYFm/giphy.gif?cid=6c09b952tkrxotzrn6ptxivw44i5ke6qp411ja7vu7daejmw&rid=giphy.gif");
 }
 
 function setup() {
-    canvas = createCanvas(1000,500);
-    // canvas.center();
+    canvas = createCanvas(1000,500,);
     canvas.position(150,300);
     video = createCapture(VIDEO);
     video.hide();
-
     color_name = "";
     frame_name = "";
 }
@@ -16,7 +14,6 @@ function setup() {
 function draw() {
     image(video,0,0,900,400);
     tint(color_name);
-
 
     if (frame_name == "Circle"){
         Draw_circle()
@@ -100,31 +97,23 @@ function Draw_Lici(){
 
     fill(248,255,0);
     stroke(52,227,27);
-    rect(60,20,780,10);
+    rect(60,20,770,10);
 
-    // fill(107,225,208);
-    // stroke(128,0,0);
-    // circle(30,30,50);
+    fill(13, 255, 0);
+    stroke(244, 255, 0);
+    circle(30,370,50);
 
-    // fill(248,255,0);
-    // stroke(52,227,27);
-    // rect(60,20,780,10);
+    fill(255, 177, 0);
+    stroke(52,227,27);
+    rect(60,370,780,10);
 
-    // fill(107,225,208);
-    // stroke(128,0,0);
-    // circle(30,30,50);
+    fill(0, 53, 255);
+    stroke(128,0,0);
+    circle(870,30,50);
 
-    // fill(248,255,0);
-    // stroke(52,227,27);
-    // rect(60,20,780,10);
-
-    // fill(107,225,208);
-    // stroke(128,0,0);
-    // circle(30,30,50);
-
-    // fill(248,255,0);
-    // stroke(52,227,27);
-    // rect(60,20,780,10);
+    fill(255, 0, 254);
+    stroke(128,0,0);
+    circle(870,370,50);
 }
 
 function downLoad(){
