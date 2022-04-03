@@ -42,8 +42,4 @@ function setup(){
     canvas = createCanvas(screen_width,screen_height);
 }
 
-function draw(){
-    // if(draw_apple == "set"){
-        
-    // }
-}
+function draw(){}
