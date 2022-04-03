@@ -8,18 +8,6 @@ function preload() {
     apple = loadImage("apple.png");
 }
 
-function setup(){
-    screen_width = window.innerWidth();
-    screen_height = window.innerHeight();
-    canvas = createCanvas(screen_width,screen_height);
-}
-
-function Draw(){
-    if(draw_apple == "set"){
-        
-    }
-}
-
 var SpeechRecognition = window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
@@ -30,13 +18,32 @@ function Start(){
 
 recognition.onresult = function(event) {
     console.log(event);
-    var content = event.results[0][0].transscript;
+    var content = event.results[0][0].transcript;
     console.log(content);
     to_number = Number(content);
     document.getElementById("Status").innerHTML = "The Speech has been recognized as: " + content;
     if (Number.isInteger(to_number)){
-        draw_apple = "set";
+        var draw_apple = "set";
+        for (var i = 1; i<= to_number; i++){
+            x = Math.floor(Math.random()*700);
+            y = Math.floor(Math.random()*400);
+            image(apple,x,y,50,50);
+            var speak_data = to_number + "Apples drawn";
+            speak()
+        }
     } else{
         DocumentFragment.getElementById("Status").innerHTML = "The system is not recognized as number";
     }
+}
+
+function setup(){
+    screen_width = window.innerWidth;
+    screen_height = window.innerHeight;
+    canvas = createCanvas(screen_width,screen_height);
+}
+
+function draw(){
+    // if(draw_apple == "set"){
+        
+    // }
 }
